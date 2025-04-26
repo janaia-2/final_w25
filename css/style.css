@@ -1,0 +1,281 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fdfcf9;
+    color: #222;
+    line-height: 1.8;
+}
+
+img {
+    max-width: 225px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #5b3c88;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #222;
+    padding: 3rem;
+    transition: all 0.3s ease;
+}
+
+header.shrink {
+    padding: .5rem;
+    background-color: #222;
+}
+
+#site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #5b3c88;
+}
+
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    align-items: center;
+}
+
+
+nav {
+    background-color: #222;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: .75rem;
+}
+
+nav a {
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a.active, nav a:hover {
+    background-color: #5b3c88;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section p {
+    line-height: 1.4;
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+
+main section:nth-child(even) {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+main section {
+    width: 80%;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+    text-align: left;
+    gap: 1.5rem;
+    border: 4px solid darkgray;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+}
+
+
+main section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+main section:nth-child(odd) {
+    transform: translateX(-50px);
+}
+
+main section:nth-child(even) {
+    transform: translateX(50px);
+}
+
+main section.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.importance-grid {
+    align-items: center;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+
+.head-cap {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 1.15rem;
+}
+
+
+main h1, main h2, main h3 {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    color: #5b3c88;
+}
+
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+main h2, main h3 {
+    font-size: 1.5rem;
+}
+
+main h3 {
+    margin-top: 3rem;
+}
+
+.vinyl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.vinyl-grid figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+body.dark-mode .vinyl-grid figure {
+    background-color: #222;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .vinyl-grid figcaption {
+    color: #e0e0e0;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+nav.dark-mode {
+    background-color: #333;
+}
+
+footer.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+main section.dark-mode {
+    border: 6px solid white;
+}
+
+button#darkModeToggle {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #5b3c88;
+    color: white;
+    cursor: pointer;
+}
+
+button#darkModeToggle:hover {
+    background-color: #452a6d;
+    text-decoration: underline;
+}
+
+body.dark-mode h2,
+body.dark-mode h3, body.dark-mode h1 {
+  color: white;
+}
+
+footer {
+    background-color:#5b3c88;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    padding: .55rem;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure figcaption {
+    font-style: italic;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main {
+      padding: 1rem;
+    }
+    }
