@@ -164,10 +164,7 @@ main h1 {
 
 main h2, main h3 {
     font-size: 1.5rem;
-}
-
-main h3 {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .vinyl-grid {
